@@ -15,7 +15,7 @@
   import moveFocusInside, {focusInside} from 'focus-lock';
 
   function deferAction(action) {
-    setImmediate
+    (typeof setImmediate == 'function')
       ? setImmediate(action)
       : setTimeout(action, 1)
   }
